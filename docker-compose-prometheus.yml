@@ -1,0 +1,12 @@
+﻿version: '3.4'
+
+services:
+  mem-cache-prometheus:
+    image: teamhitori/mem-cache-prometheus:231123-0002
+    container_name: mem-cache-prometheus
+    build:
+      context: prometheus
+      dockerfile: Dockerfile
+    ports:
+      - "7075:8080"
+
