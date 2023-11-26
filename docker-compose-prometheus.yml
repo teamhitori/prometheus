@@ -2,7 +2,7 @@
 
 services:
   mem-cache-prometheus:
-    image: teamhitori/mem-cache-prometheus:231123-0002
+    image: teamhitori/mem-cache-prometheus
     container_name: mem-cache-prometheus
     build:
       context: prometheus
