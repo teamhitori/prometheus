@@ -28,8 +28,8 @@ jobs:
       - name: Build and Push Docker Images
         run: |
           VERSION_TAG=${{ steps.git-count.outputs.commit-count }}
-          docker-compose -f docker-compose-prometheus build --build-arg VERSION_TAG=$VERSION_TAG
-          docker-compose -f docker-compose-prometheus push
+          docker-compose -f docker-compose-prometheus.yml build --build-arg VERSION_TAG=$VERSION_TAG
+          docker-compose -f docker-compose-prometheus.yml push
 
   deploy-to-azure:
     needs: build-and-push
